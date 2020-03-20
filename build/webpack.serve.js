@@ -70,6 +70,7 @@ module.exports = {
     target: 'web',
     devServer: {
         contentBase: path.resolve(__dirname, '../'),
-        port: 8111
+        port: 8111,
+        host: 'localhost.to8to.com'
     }
 }
