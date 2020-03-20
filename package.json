@@ -1,6 +1,6 @@
 {
     "name": "canvas-drawer",
-    "version": "0.1.2",
+    "version": "0.1.0",
     "description": "",
     "main": "dist/index.js",
     "types": "dist/types/index.d.ts",
