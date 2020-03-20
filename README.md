@@ -45,5 +45,10 @@ dr.main.canvas.style.width = '285px'
 dr.main.canvas.style.height = '422px'
 document.body.append(dr.main.canvas)
 
+dr.toBase64().then((data) => {
+    console.log(data)
+})
+
+
 
 ```
