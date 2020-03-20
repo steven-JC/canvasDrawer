@@ -1,8 +1,12 @@
 # canvas-drawer
 
-### TypeScript defination is included.
+### TypeScript Definition File is included.
+
+`yarn add canvas-drawer`
 
 ```typeScript
+
+import Drawer from 'canvas-drawer'
 
 const dr = new Drawer({ width: 285, height: 422 })
 dr.drawText('会计师的立方空间是考虑到福晶科技是否将克里斯多夫框架', {

@@ -10,6 +10,13 @@ export default class ImageTextDrawer {
         this.options.width = 2 * this.options.width
         this.options.height = 2 * this.options.height
         this.main = this.mkCanvas(this.options.width, this.options.height)
+        this.main.context.fillStyle = '#fff'
+        this.main.context.fillRect(
+            0,
+            0,
+            this.main.canvas.width,
+            this.main.canvas.height
+        )
     }
     public async drawImage(url: string, style: ImageStyle) {
         console.log(url)
@@ -39,8 +46,12 @@ export default class ImageTextDrawer {
             style.top * 2
         )
     }
-    public async toBase64(canvas?: HTMLCanvasElement) {
+    public toBase64(canvas?: HTMLCanvasElement) {
         return (canvas || this.main.canvas).toDataURL('image/jpeg')
+    }
+
+    public destroy() {
+        this.main = null
     }
 
     protected mkCanvas(width, height): ICanvas {

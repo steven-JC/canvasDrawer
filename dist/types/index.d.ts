@@ -4,7 +4,8 @@ export default class ImageTextDrawer {
     constructor(options: ImageTextDrawerOptions);
     drawImage(url: string, style: ImageStyle): Promise<void>;
     drawText(text: string, style: TextStyle): Promise<void>;
-    toBase64(canvas?: HTMLCanvasElement): Promise<string>;
+    toBase64(canvas?: HTMLCanvasElement): string;
+    destroy(): void;
     protected mkCanvas(width: any, height: any): ICanvas;
     protected getTextWidth(text: any): number;
     protected getTextByMaxWidth(text: string, font: string, maxWidth: number): string;
